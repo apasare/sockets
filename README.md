@@ -6,7 +6,7 @@ This class is a wrapper for PHP's [Socket Functions](http://www.php.net/manual/e
 
 ### Requirements
 
-PHP 5.x.x
+PHP 5.x.x  
 php_sockets extension
 
 ### Use
