@@ -1,8 +1,6 @@
 # PHP socket class
 
-## Description
-
-This class is a wrapper for PHP's [Socket Functions](http://www.php.net/manual/en/ref.sockets.php)
+`socket` is a wrapper class for PHP's [Socket Functions](http://www.php.net/manual/en/ref.sockets.php)
 
 ## Requirements
 
