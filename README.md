@@ -16,7 +16,7 @@ php_sockets extension
 	$socket->create($domain, $type, $protocol)
 		->connect($address, $port);
 
-	// base code for a client socket
+	// base code for a server socket
 	$socket = new socket;
 	$socket->create($domain, $type, $protocol)
 		->bind($address, $port)
