@@ -1,4 +1,4 @@
-# socket class
+# PHP socket class
 
 ## Description
 
