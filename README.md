@@ -10,14 +10,22 @@ php_sockets extension
 ## Usage
 
 	// base code for a client socket
-	$socket = new socket;
-	$socket->create($domain, $type, $protocol)
-		->connect($address, $port);
+	try{
+		$socket = new socket;
+		$socket->create($domain, $type, $protocol)
+			->connect($address, $port);
+	}catch(Exception $e){
+		// Log error
+	}
 
 	// base code for a server socket
-	$socket = new socket;
-	$socket->create($domain, $type, $protocol)
-		->bind($address, $port)
-		->listen();
+	try{
+		$socket = new socket;
+		$socket->create($domain, $type, $protocol)
+			->bind($address, $port)
+			->listen();
+	}catch(Exception $e){
+		// Log error
+	}
 
 Please check [Wiki](https://github.com/godvsdeity/sockets/wiki) section for more examples and some tips and tricks. (coming soon)
