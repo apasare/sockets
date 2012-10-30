@@ -25,7 +25,7 @@ class socket{
 	function __construct($params = null){
 		if(isset($params['_socket'])){
 			$this->_socket = $params['_socket'];
-			$this->_data = array_merge($this->_data, $this->getSockName());
+			//$this->_data = array_merge($this->_data, $this->getSockName());
 			
 			return;
 		}
