@@ -355,7 +355,7 @@ class socket{
 	/**
 	 * Shuts down a socket for receiving, sending, or both
 	 * 
-	 * @param integer $how (0 - Shutdown socket reading | 1 - Shutdown socket writing | 2 - Shutdown socket reading and writing)
+	 * @param integer $how (0 - Shutdown socket reading || 1 - Shutdown socket writing || 2 - Shutdown socket reading and writing)
 	 * @return void
 	 */
 	function shutdown($how = 2){
