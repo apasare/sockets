@@ -6,6 +6,8 @@ class socket{
 	private $_socket;
 	
 	protected $_data = array(
+        '_client' => false,
+        '_server' => true,
 		'_create' => false,
 		'_connect' => false,
 		'_bind' => false,
@@ -34,13 +36,13 @@ class socket{
 			$this->_data = array_merge($this->_data, $params);
 		}
 		
-		if($this->_data['_create']){
+		if($this->_data['_create'] || $this->_data['_client'] || $this->_data['server']){
 			$this->create();
 		}
 		
-		if($this->_data['_connect']){
+		if($this->_data['_connect'] || $this->_data['_client']){
 			$this->connect();
-		}else if($this->_data['_bind']){
+		}else if($this->_data['_bind'] || $this->_data['_server']){
 			$this->bind();
 		}
 	}
@@ -251,7 +253,7 @@ class socket{
 		
 		$buffer = '';
 		$bytes = @socket_recv($this->_socket, $buffer, $length, $flags);
-		if($bytes === false){
+		if($bytes === false && $this->getErrorCode()){
 			$this->throwException('socket::recv() failed, reason: ');
 		}
 		
