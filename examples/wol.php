@@ -30,7 +30,7 @@ try{
         'type' => SOCK_DGRAM,
         'protocol' => SOL_UDP,
         'address' => $ip,
-        'port' => '0'
+        'port' => 0
     ));
     $client->setOption(SOL_SOCKET, SO_BROADCAST, true);
 
