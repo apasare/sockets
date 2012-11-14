@@ -14,8 +14,10 @@ require_once '../socket.php';
 
 header('Content-Type: text/plain');
 
-$ip = '192.168.1.255'; // broadcasting ip address
-$mac = 'XX-XX-XX-XX-XX-XX'; // computer's physical address
+// broadcasting ip address
+$ip = '192.168.1.255'; // change it to yours
+//computer's physical address
+$mac = 'XX-XX-XX-XX-XX-XX'; // change it to yours
 $mac = explode('-', $mac);
 foreach($mac as &$byte){
     $byte = chr(hexdec($byte));
